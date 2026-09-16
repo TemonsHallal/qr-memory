@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#17030b">
+
+    <title>temon</title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     MUSIC
+================================================== -->
+
+<audio
+    id="music"
+    loop
+    preload="auto">
+
+    <source
+        src="{{ url_for('static', filename='music/song.mp3') }}"
+        type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- ==================================================
+     OPEN SCREEN
+================================================== -->
+
+<div
+    id="intro"
+    class="intro">
+
+    <div class="intro-heart">
+        ❤️
+    </div>
+
+    <p class="intro-small">
+        Ada sesuatu untuk kamu
+    </p>
+
+    <h1>
+        ENDUL 
+    </h1>
+
+    <button
+        id="enter-button"
+        class="enter-button">
+
+        Buka ❤️
+
+    </button>
+
+</div>
+
+
+
+<!-- ==================================================
+     MAIN WEBSITE
+================================================== -->
+
+<div
+    id="website"
+    class="website hidden">
+
+
+    <!-- FLOATING HEARTS -->
+
+    <div
+        id="hearts"
+        class="hearts">
+    </div>
+
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero">
+
+
+        <div class="hero-label">
+            A LITTLE SURPRISE FOR YOU
+        </div>
+
+
+        <h1>
+
+            Untuk Seseorang<br>
+
+            <span>
+                yang Paling Spesial
+            </span>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+            Dari sekian banyak orang di dunia,
+            aku bersyukur bisa bertemu kamu.
+
+        </p>
+
+
+        <div class="scroll-indicator">
+
+            <span>
+                ↓
+            </span>
+
+            Scroll perlahan
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PHOTO STORY
+    ================================================== -->
+
+    <section class="photo-story">
+
+
+        <div class="section-heading">
+
+            <span>
+                OUR MEMORIES
+            </span>
+
+            <h2>
+                Potongan cerita kita
+            </h2>
+
+        </div>
+
+
+        <!-- FOTO 1 -->
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/1.jpeg') }}"
+                    alt="Kenangan 1"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="memory-text">
+
+                <small>
+                    01
+                </small>
+
+                <h3>
+                    Awal dari semuanya
+                </h3>
+
+                <p>
+                    Mungkin waktu itu terlihat
+                    seperti hari biasa.
+                    Tapi ternyata hari itu
+                    menjadi awal dari cerita
+                    yang sangat berarti.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOTO 2 -->
+
+        <div class="memory reverse">
+
+            <div class="memory-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/2.JPG') }}"
+                    alt="Kenangan 2"
+                    loading="lazy">
+                    
+
+            </div>
+
+
+            <div class="memory-text">
+
+                <small>
+                    02
+                </small>
+
+                <h3>
+                    Hari-hari kecil
+                </h3>
+
+                <p>
+                    Dari ngobrol hal random,
+                    ketawa karena hal kecil,
+                    sampai momen yang akhirnya
+                    menjadi kenangan.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOTO 3 -->
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/3.jpg') }}"
+                    alt="Kenangan 3"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="memory-text">
+
+                <small>
+                    03
+                </small>
+
+                <h3>
+                    Momen yang aku simpan
+                </h3>
+
+                <p>
+                    Ada beberapa momen yang
+                    mungkin sederhana,
+                    tapi selalu berhasil membuat
+                    aku tersenyum ketika mengingatnya.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOTO 4 -->
+
+        <div class="memory reverse">
+
+            <div class="memory-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/4.jpg') }}"
+                    alt="Kenangan 4"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="memory-text">
+
+                <small>
+                    04
+                </small>
+
+                <h3>
+                    Tentang kita
+                </h3>
+
+                <p>
+                    Bukan tentang seberapa sempurna
+                    semuanya berjalan.
+                    Tapi tentang bagaimana kita
+                    tetap memilih untuk berjalan bersama.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         VIDEO
+    ================================================== -->
+
+    <section class="video-section">
+
+
+        <div class="section-heading">
+
+            <span>
+                OUR VIDEO
+            </span>
+
+            <h2>
+                Satu video kecil
+            </h2>
+
+        </div>
+
+
+        <div class="video-wrapper">
+
+            <video
+                id="memory-video"
+                controls
+                playsinline
+                preload="metadata">
+
+                <source
+                    src="{{ url_for('static', filename='videos/memory.mp4') }}"
+                    type="video/mp4">
+
+                Browser kamu tidak mendukung video.
+
+            </video>
+
+        </div>
+
+
+        <p class="video-caption">
+
+            Beberapa detik mungkin terasa singkat,
+            tapi kenangannya bisa tinggal lama. ❤️
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LETTER
+    ================================================== -->
+
+    <section class="letter-section">
+
+
+        <div class="section-heading">
+
+            <span>
+                A LETTER FOR YOU
+            </span>
+
+            <h2>
+                Sedikit yang ingin aku sampaikan
+            </h2>
+
+        </div>
+
+
+        <div class="letter-card">
+
+
+            <div class="letter-heart">
+                ❤️
+            </div>
+
+
+            <p>
+
+                Terima kasih sudah hadir
+                di hidupku.
+
+            </p>
+
+
+            <p>
+
+                Terima kasih untuk semua
+                tawa, cerita, perhatian,
+                dan waktu yang kita habiskan
+                bersama.
+
+            </p>
+
+
+            <p>
+
+                Aku mungkin nggak selalu
+                pandai mengungkapkan
+                apa yang aku rasakan.
+
+            </p>
+
+
+            <p>
+
+                Tapi kalau ada satu hal
+                yang ingin selalu aku ingat,
+                itu adalah betapa bersyukurnya
+                aku karena pernah menemukan kamu.
+
+            </p>
+
+
+            <p>
+
+                Semoga cerita kita
+                masih panjang.
+
+            </p>
+
+
+            <div class="signature">
+
+                With love,
+
+                <strong>
+                    Aku ❤️
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FINAL
+    ================================================== -->
+
+    <section class="final-section">
+
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+
+        <p class="final-small">
+            DAN AKHIRNYA...
+        </p>
+
+
+        <h2>
+
+            Kalau suatu hari nanti
+            kita melihat kembali
+            semua ini...
+
+        </h2>
+
+
+        <p class="final-message">
+
+            Semoga kita masih menjadi
+            dua orang yang sama-sama
+            memilih untuk tetap bersama.
+
+        </p>
+
+
+        <div class="final-love">
+
+            I love you. ❤️
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+
+        Made with love ❤️
+
+    </footer>
+
+
+
+</div>
+
+
+
+<!-- ==================================================
+     MUSIC BUTTON
+================================================== -->
+
+<button
+    id="music-button"
+    class="music-button">
+
+    🔊
+
+</button>
+
+
+
+<script
+    src="{{ url_for('static', filename='js/scripts.js') }}">
+</script>
+
+
+</body>
+
+</html>

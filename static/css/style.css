@@ -1,0 +1,868 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #5b1230 0%,
+            #250713 40%,
+            #080207 100%
+        );
+
+    color: #fff;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 50, 120, .08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 120, 160, .06),
+            transparent 30%
+        );
+
+    z-index: 0;
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #5c1231,
+            #16030a 70%
+        );
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+
+}
+
+
+.intro.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+.intro-heart {
+
+    font-size: 90px;
+
+    animation:
+        heartbeat 1.8s infinite;
+
+}
+
+
+.intro-small {
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #e8b8c8;
+
+}
+
+
+.intro h1 {
+
+    margin-top: 15px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(38px, 7vw, 65px);
+
+}
+
+
+.enter-button {
+
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
+    border: 1px solid
+        rgba(255,255,255,.3);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: white;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.enter-button:hover {
+
+    background: #9d174d;
+
+    transform: translateY(-3px);
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+
+/* ==================================================
+   WEBSITE
+================================================== */
+
+.website {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+}
+
+
+.hero-label {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #e6aabd;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    max-width: 950px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 95px);
+
+    line-height: 1.05;
+
+}
+
+
+.hero h1 span {
+
+    color: #ff91b5;
+
+}
+
+
+.hero-text {
+
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    color: #d9b8c4;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+}
+
+
+.scroll-indicator {
+
+    margin-top: 100px;
+
+    color: #b9909e;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.scroll-indicator span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 25px;
+
+}
+
+
+
+/* ==================================================
+   SECTIONS
+================================================== */
+
+section {
+
+    position: relative;
+
+    padding:
+        120px 7vw;
+
+}
+
+
+.section-heading {
+
+    max-width: 800px;
+
+    margin:
+        0 auto 70px;
+
+    text-align: center;
+
+}
+
+
+.section-heading span {
+
+    color: #df8da8;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 15px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 60px);
+
+}
+
+
+
+/* ==================================================
+   MEMORY
+================================================== */
+
+.memory {
+
+    max-width: 1100px;
+
+    margin:
+        0 auto 130px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr .8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.memory.reverse {
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+}
+
+
+.memory.reverse
+.memory-image {
+
+    order: 2;
+
+}
+
+
+
+
+
+.memory-text small {
+
+    color: #e26d91;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.memory-text h3 {
+
+    margin-top: 15px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 40px;
+
+}
+
+
+.memory-text p {
+
+    margin-top: 25px;
+
+    color: #cdb2bc;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+
+/* ==================================================
+   VIDEO
+================================================== */
+
+.video-section {
+
+    background:
+        rgba(255,255,255,.015);
+
+}
+
+
+.video-wrapper {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.5);
+
+}
+
+
+.video-wrapper video {
+
+    width: 100%;
+
+    display: block;
+
+    background: black;
+
+}
+
+
+.video-caption {
+
+    max-width: 600px;
+
+    margin:
+        25px auto 0;
+
+    text-align: center;
+
+    color: #bfa1ac;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* ==================================================
+   LETTER
+================================================== */
+
+.letter-section {
+
+    min-height: 90vh;
+
+}
+
+
+.letter-card {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding:
+        60px 50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.25);
+
+}
+
+
+.letter-heart {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.letter-card p {
+
+    margin-bottom: 25px;
+
+    color: #dec6ce;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+.signature {
+
+    margin-top: 45px;
+
+    color: #b892a0;
+
+    line-height: 2;
+
+}
+
+
+.signature strong {
+
+    display: block;
+
+    color: #ff9fbb;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+
+/* ==================================================
+   FINAL
+================================================== */
+
+.final-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.final-heart {
+
+    font-size: 70px;
+
+    animation:
+        heartbeat 2s infinite;
+
+}
+
+
+.final-small {
+
+    margin-top: 30px;
+
+    color: #dc8ca5;
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+}
+
+
+.final-section h2 {
+
+    max-width: 850px;
+
+    margin-top: 25px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(38px, 6vw, 70px);
+
+    line-height: 1.2;
+
+}
+
+
+.final-message {
+
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    color: #cdb1bb;
+
+    line-height: 1.9;
+
+}
+
+
+.final-love {
+
+    margin-top: 50px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 35px;
+
+    color: #ff9db9;
+
+}
+
+
+footer {
+
+    padding:
+        30px;
+
+    text-align: center;
+
+    color: #70525e;
+
+    font-size: 11px;
+
+}
+
+
+
+/* ==================================================
+   MUSIC
+================================================== */
+
+.music-button {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 500;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(80,0,30,.8);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 19px;
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+
+/* ==================================================
+   FLOATING HEARTS
+================================================== */
+
+.heart-particle {
+
+    position: fixed;
+
+    top: -30px;
+
+    z-index: 400;
+
+    pointer-events: none;
+
+    animation:
+        fall linear forwards;
+
+}
+
+
+@keyframes fall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 800px) {
+
+
+    section {
+
+        padding:
+            90px 22px;
+
+    }
+
+
+    .memory,
+
+    .memory.reverse {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 90px;
+
+    }
+
+
+    .memory.reverse
+    .memory-image {
+
+        order: 0;
+
+    }
+
+
+    .memory-image img {
+
+        height: 420px;
+
+    }
+
+
+    .memory-text h3 {
+
+        font-size: 34px;
+
+    }
+
+
+    .letter-card {
+
+        padding:
+            40px 25px;
+
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 14px;
+
+    }
+
+
+    .memory-image img {
+
+        height: 350px;
+
+    }
+
+
+    .intro h1 {
+
+        font-size: 40px;
+
+    }
+
+}
